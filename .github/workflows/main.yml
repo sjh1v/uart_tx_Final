@@ -1,0 +1,24 @@
+name: Check Files
+
+on: [push]  # 푸시가 일어날 때마다 실행
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 가져오기 (Checkout)
+        uses: actions/checkout@v3
+
+      - name: 파일 목록 확인
+        run: |
+          echo "현재 파일 목록을 출력합니다."
+          ls -R
+      
+      - name: 필수 파일 존재 여부 확인
+        run: |
+          if [ -f "src/uart_tx.v" ]; then
+            echo "✅ 소스 파일 확인됨"
+          else
+            echo "❌ 소스 파일이 없습니다!"
+            exit 1
+          fi
