@@ -1,31 +1,27 @@
-name: Verilog Simulation
+name: Real Verilog Simulation
 
-on: 
-  push:
-  workflow_dispatch: # 버튼으로도 실행 가능하게 설정
+on: [push, workflow_dispatch]
 
 jobs:
-  run-simulation:
+  test_circuit:
     runs-on: ubuntu-latest
     steps:
-      # 1. 코드 가져오기
-      - name: Checkout Code
+      - name: 1. 코드 가져오기
         uses: actions/checkout@v3
 
-      # 2. 시뮬레이터(Icarus Verilog) 설치
-      - name: Install Icarus Verilog
+      - name: 2. 시뮬레이터(Icarus Verilog) 설치
         run: |
           sudo apt-get update
           sudo apt-get install -y iverilog
 
-      # 3. 컴파일 (src 폴더와 test 폴더에 있는 모든 .v 파일 합치기)
-      - name: Compile Verilog
+      - name: 3. 회로 컴파일 (src와 test 폴더 합치기)
         run: |
-          echo "Compiling..."
-          iverilog -o uart_sim.out src/*.v test/*.v
+          echo "🚧 컴파일을 시작합니다..."
+          # src 폴더의 모든 파일(*.v)과 test 폴더의 모든 파일(*.v)을 합쳐서 uart_sim이라는 실행 파일을 만듭니다.
+          iverilog -o uart_sim src/*.v test/*.v
 
-      # 4. 시뮬레이션 실행 (결과 출력)
-      - name: Run Simulation
+      - name: 4. 시뮬레이션 실행 및 결과 출력
         run: |
-          echo "Running Simulation..."
-          vvp uart_sim.out
+          echo "🚀 시뮬레이션을 실행합니다..."
+          # 만들어진 실행 파일을 돌립니다. Testbench의 $display 내용이 여기에 뜹니다.
+          vvp uart_sim
