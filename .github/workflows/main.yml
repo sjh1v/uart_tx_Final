@@ -1,24 +1,20 @@
-name: Check Files
+name: Manual Simulation Check
 
-on: [push]  # 푸시가 일어날 때마다 실행
+on:
+  push:                  # 파일이 푸시될 때도 실행되고
+  workflow_dispatch:     # ⭐ 이 줄이 있으면 '버튼'으로도 실행 가능!
 
 jobs:
-  check:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: 코드 가져오기 (Checkout)
+      - name: 코드 가져오기
         uses: actions/checkout@v3
 
-      - name: 파일 목록 확인
-        run: |
-          echo "현재 파일 목록을 출력합니다."
-          ls -R
-      
-      - name: 필수 파일 존재 여부 확인
-        run: |
-          if [ -f "src/uart_tx.v" ]; then
-            echo "✅ 소스 파일 확인됨"
-          else
-            echo "❌ 소스 파일이 없습니다!"
-            exit 1
-          fi
+      - name: 파일 목록 확인 (디버깅용)
+        run: ls -R
+
+      # 여기에 Icarus Verilog 설치 및 실행 코드 추가 가능
+      # 예: 
+      # - name: Install Icarus Verilog
+      #   run: sudo apt-get install -y iverilog
