@@ -1,1 +1,0 @@
-lvs {/openlane/designs/uart_tx/runs/RUN_2025.12.11_19.43.52/results/signoff/uart_tx.spice uart_tx} {/openlane/designs/uart_tx/runs/RUN_2025.12.11_19.43.52/tmp/signoff/36-uart_tx.pnl.v uart_tx} /home/sjh/.ciel/sky130A/libs.tech/netgen/sky130A_setup.tcl /openlane/designs/uart_tx/runs/RUN_2025.12.11_19.43.52/logs/signoff/39-uart_tx.lef.lvs.log -json

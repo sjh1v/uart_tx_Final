@@ -1,5 +1,0 @@
-Warning: /openlane/designs/uart_tx/runs/RUN_2025.12.11_19.43.52/results/routing/uart_tx.nl.v line 836, module sky130_fd_sc_hd__tapvpwrvgnd_1 not found. Creating black box for TAP_94.
-Warning: /openlane/designs/uart_tx/runs/RUN_2025.12.11_19.43.52/results/routing/uart_tx.nl.v line 1175, module sky130_ef_sc_hd__decap_12 not found. Creating black box for FILLER_0_0_13.
-Warning: /openlane/designs/uart_tx/runs/RUN_2025.12.11_19.43.52/results/routing/uart_tx.nl.v line 1183, module sky130_fd_sc_hd__fill_2 not found. Creating black box for FILLER_0_0_85.
-Warning: /openlane/designs/uart_tx/runs/RUN_2025.12.11_19.43.52/results/routing/uart_tx.nl.v line 1196, module sky130_fd_sc_hd__fill_1 not found. Creating black box for FILLER_0_0_197.
-[WARNING] Did not save OpenROAD database!

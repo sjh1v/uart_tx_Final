@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 30000 30000
+string GDS_END 1041146
+string GDS_FILE /openlane/designs/uart_tx/runs/RUN_2025.12.14_11.55.58/results/signoff/uart_tx.magic.gds
+string GDS_START 345926
+<< end >>

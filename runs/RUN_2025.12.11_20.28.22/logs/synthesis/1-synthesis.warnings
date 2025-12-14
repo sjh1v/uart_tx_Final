@@ -1,4 +1,0 @@
-ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
-Warning: Wire uart_tx.\tx_out is used but has no driver.
-Warning: Wire uart_tx.\tx_busy is used but has no driver.
-Warnings: 2 unique messages, 2 total
